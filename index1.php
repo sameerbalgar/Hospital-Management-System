@@ -16,40 +16,56 @@ include("header.php");
 
     <link rel="stylesheet" type="text/css" href="style2.css">
 
-
-    
   </head>
   <style type="text/css">
-    #inputbtn:hover{cursor:pointer;}
-    .card{
-    background: #f8f9fa;
-    border-top-left-radius: 5% 5%;
-    border-bottom-left-radius: 5% 5%;
-    border-top-right-radius: 5% 5%;
-    border-bottom-right-radius: 5% 5%;
-}
-
+    body{
+        background:linear-gradient(135deg,#3931af,#00c6ff);
+        background-size:cover;
+        font-family:'IBM Plex Sans', sans-serif;
+    }
+    #mainNav .navbar-brand h4{ margin:0; }
+    .login-wrap{
+        margin-top:90px;
+        margin-bottom:60px;
+    }
+    .ambulance-col{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+    .ambulance-col img{
+        width:220px;
+        max-width:60%;
+        animation:mover 1.6s infinite alternate ease-in-out;
+        margin-bottom:20px;
+    }
+    .ambulance-col h4{
+        color:#fff;
+        font-weight:600;
+    }
   </style>
-  <body style="background: -webkit-linear-gradient(left, #3931af, #00c6ff); background-size: cover;">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
     <div class="container">
 
-      <a class="navbar-brand js-scroll-trigger" href="index.php" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp GLOBAL HOSPITALS</h4></a>
+      <a class="navbar-brand js-scroll-trigger" href="index.php"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp; Smart Hospital</h4></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
+            <a class="nav-link js-scroll-trigger" href="index.php"><h6>HOME</h6></a>
           </li>
   
           <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>ABOUT US</h6></a>
+            <a class="nav-link js-scroll-trigger" href="services.html"><h6>ABOUT US</h6></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+            <a class="nav-link js-scroll-trigger" href="contact.html"><h6>CONTACT</h6></a>
           </li>
         </ul>
       </div>
@@ -58,30 +74,21 @@ include("header.php");
 
 
 
-    <div class="container-fluid" style="margin-top:60px;margin-bottom:60px;color:#34495E;">
-      <div class="row">
+    <div class="container-fluid login-wrap">
+      <div class="row align-items-center">
 
-        
+        <div class="col-md-7 ambulance-col">
+          <img src="images/ambulance1.png" alt="ambulance">
+          <h4>We are here for you!</h4>
+        </div>
 
-         <div class="col-md-7" style="padding-left: 180px; ">
-                 <div style="-webkit-animation: mover 2s infinite alternate;
-    animation: mover 1s infinite alternate;">
-          <img src="images/ambulance1.png" alt="" style="width: 20%;padding-left: 40px;margin-top: 150px;margin-left: 45px;margin-bottom:15px">
-      </div>
-
-      <div style="color: white;">
-            <h4 style="font-family: 'IBM Plex Sans', sans-serif;"> We are here for you!</h4>
-          </div>
-
-         </div>
-
-         <div class="col-md-4" style="margin-top: 5%;right: 8%">
-          <div class="card" style="font-family: 'IBM Plex Sans', sans-serif;">
+         <div class="col-md-4 offset-md-1">
+          <div class="card">
             <div class="card-body">
               <center>
                 <i class="fa fa-hospital-o fa-3x" aria-hidden="true" style="color:#0062cc"></i>
                 <br>
-              <h3 style="margin-top: 10%">Patient Login</h3><br>
+              <h3>Patient Login</h3><br>
               <form class="form-group" method="POST" action="func.php">
                 <div class="row" style="margin-top: 10%">
                   <div class="col-md-4"><label>Email-ID: </label></div>
@@ -90,10 +97,8 @@ include("header.php");
                   <div class="col-md-8" style="margin-top: 8%"><input type="password" class="form-control" name="password2" placeholder="enter password" required/></div><br><br><br>
                 </div>
                 <div class="row">
-                 <div class="col-md-4"  style="padding-left: 160px;margin-top: 10%">
-                    <center><input type="submit" id="inputbtn" name="patsub" value="Login" class="btn btn-primary"></center></div>           
-                 <!--  <div class="col-md-8" style="margin-top: 10%">
-                    <a href="index.php" class="btn btn-primary">Back</a></div> -->
+                 <div class="col-md-12" style="margin-top: 10%">
+                    <center><input type="submit" id="inputbtn" name="patsub" value="Login" class="btn btn-primary"></center></div>
                 </div>
               </form>
             </center>
