@@ -81,6 +81,9 @@
                 <li class="nav-item">
                     <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab">Receptionist</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pharmacist-tab" data-toggle="tab" href="#pharmacist" role="tab">Pharmacist</a>
+                </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <!-- Patient Registration Tab -->
@@ -161,6 +164,24 @@
                                     <input type="password" class="form-control" placeholder="Password *" name="password2" required/>
                                 </div>
                                 <input type="submit" class="btnRegister" name="adsub" value="Login"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pharmacist Login Tab -->
+                <div class="tab-pane fade" id="pharmacist" role="tabpanel">
+                    <h3 class="register-heading">Login as Pharmacist</h3>
+                    <form method="post" action="func_pharmacy.php">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="User Name *" name="pharmacist_username" onkeydown="return alphaOnly(event);" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" name="pharmacist_password" required/>
+                                </div>
+                                <input type="submit" class="btnRegister" name="pharmasub" value="Login"/>
                             </div>
                         </div>
                     </form>
